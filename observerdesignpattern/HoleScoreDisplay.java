@@ -10,14 +10,16 @@ public class HoleScoreDisplay implements Observer{
 
     public HoleScoreDisplay(Subject golfer) {
         this.golfer = golfer;
+        
     }
 
     public void update(int strokes, int par) {
         this.strokes = strokes;
         this.par = par;
+        displayCurrentScore();
     }
 
-    public void displayCurrentScore() {
+    private void displayCurrentScore() {
         int score;
         System.out.println("Current Hole Stats:");
         System.out.println("Par: " + par + "");
