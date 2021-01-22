@@ -30,7 +30,7 @@ public class RoundScoreDisplay implements Observer{
             System.out.println(score + " Over par");
         }
         else if (strokesTotal == parTotal) {
-            System.out.println("Made par");
+            System.out.println("Making par");
         }
         else {
             score = parTotal - strokesTotal;
