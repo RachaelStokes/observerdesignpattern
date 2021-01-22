@@ -12,7 +12,7 @@ public class HoleScoreDisplay implements Observer{
 
     /**
      * sets the golfer and calls register observer to add the golfer to the list of observers
-     * @param golfer
+     * @param golfer the subject that is being registered as an observer
      */
     public HoleScoreDisplay(Subject golfer) {
         this.golfer = golfer;
