@@ -10,7 +10,7 @@ public class HoleScoreDisplay implements Observer{
 
     public HoleScoreDisplay(Subject golfer) {
         this.golfer = golfer;
-        
+        golfer.registerObserver(this);
     }
 
     public void update(int strokes, int par) {
@@ -21,19 +21,20 @@ public class HoleScoreDisplay implements Observer{
 
     private void displayCurrentScore() {
         int score;
+        System.out.println(" ");
         System.out.println("Current Hole Stats:");
         System.out.println("Par: " + par + "");
         System.out.println("Strokes: " + strokes + "");
         if (strokes > par) {
             score = strokes - par;
-            System.out.println(score + "Over par");
+            System.out.println(score + " Over par");
         }
         else if (strokes == par) {
             System.out.println("Made par");
         }
         else {
             score = par - strokes;
-            System.out.println(score + "Under par");
+            System.out.println(score + " Under par");
         }
     }
 }

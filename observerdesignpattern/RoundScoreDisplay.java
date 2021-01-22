@@ -20,6 +20,22 @@ public class RoundScoreDisplay implements Observer{
     }
 
     private void displayRoundScore() {
-        //need to finish
+        int score;
+        System.out.println(" ");
+        System.out.println("Round Stats:");
+        System.out.println("Par: " + parTotal + "");
+        System.out.println("Strokes: " + strokesTotal + "");
+        if (strokesTotal > parTotal) {
+            score = strokesTotal - parTotal;
+            System.out.println(score + " Over par");
+        }
+        else if (strokesTotal == parTotal) {
+            System.out.println("Made par");
+        }
+        else {
+            score = parTotal - strokesTotal;
+            System.out.println(score + " Under par");
+        }
     }
+    
 }
