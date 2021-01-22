@@ -2,17 +2,22 @@ package observerdesignpattern;
 import java.util.*;
 
 /**
- * 
+ * golfer class implements the subject interface, represents a golfer with a name
  * @author Rachael
  */
 public class Golfer implements Subject{
-    private ArrayList<Observer> observers;
-    private String name;
+    
+    //instance variables
+    private ArrayList<Observer> observers; //arraylist of observers
+    private String name; //golfer's name
 
+    /**
+     * sets the name of the golfer and instantiates the observers list 
+     * @param name the string name of the golfer
+     */
     public Golfer(String name) {
         this.name = name;
         observers = new ArrayList<Observer>();
-        
     }
 
     public void registerObserver(Observer observer) {
